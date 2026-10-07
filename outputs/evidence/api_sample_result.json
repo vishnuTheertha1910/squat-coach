@@ -1,0 +1,44 @@
+{
+  "id": "7f1ffb24-b6b7-4ae3-8146-8d526c12aebc",
+  "created_at": "2026-10-04T07:41:52.857597+00:00",
+  "status": "completed",
+  "mode": "beginner",
+  "source": "output_sample.mp4",
+  "duration_s": 18.655,
+  "width": 640,
+  "height": 480,
+  "summary": {
+    "total": 1,
+    "correct": 1,
+    "improper": 0,
+    "rule_score": 100,
+    "mean_tempo_s": 7.21,
+    "max_thigh_angle": 89
+  },
+  "reps": [
+    {
+      "index": 1,
+      "start_s": 7.5517,
+      "bottom_s": 11.8966,
+      "end_s": 14.7586,
+      "duration_s": 7.207,
+      "descent_s": 4.345,
+      "ascent_s": 2.862,
+      "min_thigh_angle": 30,
+      "max_thigh_angle": 89,
+      "verdict": "correct",
+      "fault_codes": []
+    }
+  ],
+  "metrics": {
+    "frames": 541,
+    "fps_metadata": 29.0,
+    "timestamp_fallback_frames": 0,
+    "analysis_seconds": 16.14,
+    "throughput_fps": 33.52,
+    "valid_frames": 541,
+    "invalid_counts": {}
+  },
+  "video_url": "/api/sessions/7f1ffb24-b6b7-4ae3-8146-8d526c12aebc/video",
+  "error": null
+}

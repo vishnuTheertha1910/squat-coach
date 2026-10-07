@@ -1,0 +1,10 @@
+mediapipe==0.10.21
+numpy==1.26.4
+opencv-contrib-python==4.11.0.86
+jax==0.4.35
+jaxlib==0.4.35
+fastapi==0.118.0
+uvicorn==0.37.0
+python-multipart==0.0.20
+reportlab==4.4.4
+imageio-ffmpeg==0.6.0

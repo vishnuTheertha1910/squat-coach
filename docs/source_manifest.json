@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/spmallick/learnopencv",
+  "commit": "cb8089c79eaab366a9d78e125605805c7c77ad5d",
+  "subtree": "AI-Fitness-Trainer-Using-MediaPipe-Analyzing-Squats",
+  "files": {
+    "Dockerfile": "05fae2c251f8bb0ec724c32175e80a33fd2430af21e753d87fb42f49b4e1130c",
+    "output_sample.mp4": "adc86e0ec97b3556988004a9757c57e826b9551973523baf95cbba143d7a3e50",
+    "process_frame.py": "1828cb1dac0ec9ddf9bd03b3dac08ff9c7e113b727b1024f66c67b0e7485d497",
+    "README.md": "9fc1ca4eece8d0312064537f6085b3410909045c4028ae5c1b1776bd4cd4e6f8",
+    "requirements.txt": "d24607ac22d1a1edbd9af4a8b2314895b70710912ecca81570d931a20c6e8283",
+    "setup.sh": "251ad4968a50e8cd9fc72296a4e27dfe94209700e02f02dd7003ec9d05af402e",
+    "thresholds.py": "94c50bb8888bac4efe45451f15a7c24986cbfdb05b678aa893eebc942ea26351",
+    "utils.py": "a3de7cfd8d88509356990ae30a25cf1ac22b5482380d19e214dd4edd01987fc6",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "\ud83c\udfe0\ufe0f_Demo.py": "8f23626ee5ee73cc4bee69161941a8a8ce1107ddd5a7ba1b3a7f115be8c934a0",
+    "pages/1_\ud83d\udcf7\ufe0f_Live_Stream.py": "486ea0451e624961d62ec679dc12f030a697f3a928327362b8b591eeea26f322",
+    "pages/2_ \u2b06\ufe0f_Upload_Video.py": "a3182d2941ad5c7ef3e402fc51a0445863c66a329fa47fbca61a4dd96ccc84bf"
+  }
+}

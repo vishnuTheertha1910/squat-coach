@@ -1,0 +1,6 @@
+* text=auto eol=lf
+vendor/** -text
+*.sh text eol=lf
+*.mp4 binary
+*.jpg binary
+*.pdf binary

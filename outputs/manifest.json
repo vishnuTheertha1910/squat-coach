@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-07",
+  "sessions": [
+    {
+      "id": "7f1ffb24-b6b7-4ae3-8146-8d526c12aebc",
+      "created_at": "2026-10-04T07:41:52.857597+00:00",
+      "status": "completed",
+      "mode": "beginner",
+      "source": "output_sample.mp4",
+      "filename": "source.mp4",
+      "error": null,
+      "analysis_path": "outputs/sessions/7f1ffb24-b6b7-4ae3-8146-8d526c12aebc/analysis.json",
+      "input": {
+        "path": "inputs/output_sample.mp4",
+        "sha256": "adc86e0ec97b3556988004a9757c57e826b9551973523baf95cbba143d7a3e50",
+        "bytes": 2542820
+      },
+      "playable": {
+        "path": "outputs/videos/c9c7857cdd56.mp4",
+        "sha256": "c9c7857cdd56c3d80498200e092a9a7c04db0332a1365937023a74fbcc40e883",
+        "bytes": 1311809
+      }
+    },
+    {
+      "id": "6b6e9e28-b549-46ca-8cd1-f926c792ec35",
+      "created_at": "2026-10-04T12:23:49.038783+00:00",
+      "status": "completed",
+      "mode": "beginner",
+      "source": "output_sample.mp4",
+      "filename": "source.mp4",
+      "error": null,
+      "analysis_path": "outputs/sessions/6b6e9e28-b549-46ca-8cd1-f926c792ec35/analysis.json",
+      "input": {
+        "path": "inputs/output_sample.mp4",
+        "sha256": "adc86e0ec97b3556988004a9757c57e826b9551973523baf95cbba143d7a3e50",
+        "bytes": 2542820
+      },
+      "playable": {
+        "path": "outputs/videos/c9c7857cdd56.mp4",
+        "sha256": "c9c7857cdd56c3d80498200e092a9a7c04db0332a1365937023a74fbcc40e883",
+        "bytes": 1311809
+      }
+    },
+    {
+      "id": "10fb1324-3f7a-4abd-b819-e0c06d62ce29",
+      "created_at": "2026-10-04T16:54:59.374891+00:00",
+      "status": "completed",
+      "mode": "beginner",
+      "source": "output_sample.mp4",
+      "filename": "source.mp4",
+      "error": null,
+      "analysis_path": "outputs/sessions/10fb1324-3f7a-4abd-b819-e0c06d62ce29/analysis.json",
+      "input": {
+        "path": "inputs/output_sample.mp4",
+        "sha256": "adc86e0ec97b3556988004a9757c57e826b9551973523baf95cbba143d7a3e50",
+        "bytes": 2542820
+      },
+      "playable": {
+        "path": "outputs/videos/c9c7857cdd56.mp4",
+        "sha256": "c9c7857cdd56c3d80498200e092a9a7c04db0332a1365937023a74fbcc40e883",
+        "bytes": 1311809
+      }
+    },
+    {
+      "id": "73b95a94-4ef8-4aa5-b7f6-2f3862e4f62a",
+      "created_at": "2026-10-04T17:00:49.664940+00:00",
+      "status": "completed",
+      "mode": "beginner",
+      "source": "3d-review-example.mp4",
+      "filename": "source.mp4",
+      "error": null,
+      "analysis_path": "outputs/sessions/73b95a94-4ef8-4aa5-b7f6-2f3862e4f62a/analysis.json",
+      "input": {
+        "path": "inputs/output_sample.mp4",
+        "sha256": "adc86e0ec97b3556988004a9757c57e826b9551973523baf95cbba143d7a3e50",
+        "bytes": 2542820
+      },
+      "playable": {
+        "path": "outputs/videos/c9c7857cdd56.mp4",
+        "sha256": "c9c7857cdd56c3d80498200e092a9a7c04db0332a1365937023a74fbcc40e883",
+        "bytes": 1311809
+      }
+    },
+    {
+      "id": "74afd43c-e422-44dc-be25-6f922421bb42",
+      "created_at": "2026-10-04T17:19:08.286403+00:00",
+      "status": "completed",
+      "mode": "beginner",
+      "source": "output_sample.mp4",
+      "filename": "source.mp4",
+      "error": null,
+      "analysis_path": "outputs/sessions/74afd43c-e422-44dc-be25-6f922421bb42/analysis.json",
+      "input": {
+        "path": "inputs/output_sample.mp4",
+        "sha256": "adc86e0ec97b3556988004a9757c57e826b9551973523baf95cbba143d7a3e50",
+        "bytes": 2542820
+      },
+      "playable": {
+        "path": "outputs/videos/c9c7857cdd56.mp4",
+        "sha256": "c9c7857cdd56c3d80498200e092a9a7c04db0332a1365937023a74fbcc40e883",
+        "bytes": 1311809
+      }
+    },
+    {
+      "id": "b4fb6a00-b6ee-4873-9417-5c0f9088ee4a",
+      "created_at": "2026-10-06T02:33:00.988594+00:00",
+      "status": "completed",
+      "mode": "beginner",
+      "source": "20261006-0231-36.9013994.mp4",
+      "filename": "source.mp4",
+      "error": null,
+      "analysis_path": "outputs/sessions/b4fb6a00-b6ee-4873-9417-5c0f9088ee4a/analysis.json",
+      "input": {
+        "path": "inputs/20261006-0231-36.9013994.mp4",
+        "sha256": "5dd81b8d6ee9f2bc1be26485e18b025d6c82a002b4eec4d534837f59fa77adce",
+        "bytes": 22952364
+      },
+      "playable": {
+        "path": "outputs/videos/b60bf8f8aecf.mp4",
+        "sha256": "b60bf8f8aecf854dd368bdd1e5ccb09f6653b4fcb51822cd0dd8305bf88b0d09",
+        "bytes": 2683047
+      }
+    },
+    {
+      "id": "c48bf97b-9343-40b7-9faa-6407b27422f9",
+      "created_at": "2026-10-06T02:34:46.212607+00:00",
+      "status": "completed",
+      "mode": "beginner",
+      "source": "squat.mp4",
+      "filename": "source.mp4",
+      "error": null,
+      "analysis_path": "outputs/sessions/c48bf97b-9343-40b7-9faa-6407b27422f9/analysis.json",
+      "input": {
+        "path": "inputs/squat.mp4",
+        "sha256": "0a1b6dc35f6df231de33525c1f40ab1d4b98906b3523a1de39cd4e6f32316541",
+        "bytes": 2479667
+      },
+      "playable": {
+        "path": "outputs/videos/c261ffd72f66.mp4",
+        "sha256": "c261ffd72f6616776a6fc5bd424390d2449f736eec62408250f12ef8697ae891",
+        "bytes": 1369471
+      }
+    },
+    {
+      "id": "17f67fe1-d4aa-4f4e-a726-106d0a4cd623",
+      "created_at": "2026-10-06T02:35:58.379872+00:00",
+      "status": "completed",
+      "mode": "beginner",
+      "source": "correct_results.mp4",
+      "filename": "source.mp4",
+      "error": null,
+      "analysis_path": "outputs/sessions/17f67fe1-d4aa-4f4e-a726-106d0a4cd623/analysis.json",
+      "input": {
+        "path": "inputs/correct_results.mp4",
+        "sha256": "6462bf4e22f81a481267c9329aa25ea6c7872c1a6ab9be7dc6a7e388ad001d7f",
+        "bytes": 30240343
+      },
+      "playable": {
+        "path": "outputs/videos/0091adf51db0.mp4",
+        "sha256": "0091adf51db00acbf1d72f288a2dd12de463c51188703d5e417ae25a3dfbac2a",
+        "bytes": 10803023
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+session_id,mode,total,correct,improper,rule_score_percent
+c48bf97b-9343-40b7-9faa-6407b27422f9,beginner,2,2,0,100
+
+rep,start_s,bottom_s,end_s,duration_s,max_thigh_inclination_upstream_degrees,verdict,fault_codes
+1,9.0424,10.5105,11.1445,2.102,80,correct,
+2,15.6156,17.4174,17.9846,2.369,82,correct,

@@ -1,0 +1,26 @@
+import {useEffect,useRef,useState} from 'react';
+
+export type WorldPoint={visibility:number;world_x?:number;world_y?:number;world_z?:number};
+const bones=[[11,12],[11,13],[13,15],[12,14],[14,16],[11,23],[12,24],[23,24],[23,25],[25,27],[27,29],[29,31],[27,31],[24,26],[26,28],[28,30],[30,32],[28,32]];
+
+export default function Pose3D({getPoints,hasWorld,playing,onTogglePlayback}:{getPoints:()=>WorldPoint[]|null;hasWorld:boolean;playing:boolean;onTogglePlayback:()=>void}){
+ const canvas=useRef<HTMLCanvasElement>(null),[yaw,setYaw]=useState(-30),[tilt,setTilt]=useState(12),[zoom,setZoom]=useState(100),drag=useRef<{x:number;y:number;yaw:number;tilt:number}|null>(null);
+ const source=useRef(getPoints);source.current=getPoints;
+ useEffect(()=>{let frame=0;function draw(){const c=canvas.current;if(!c)return;const ctx=c.getContext('2d');if(!ctx)return;const w=c.clientWidth,h=c.clientHeight,dpr=devicePixelRatio,cw=Math.round(w*dpr),ch=Math.round(h*dpr);if(c.width!==cw||c.height!==ch){c.width=cw;c.height=ch}ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);const points=source.current();
+ const a=yaw*Math.PI/180,b=tilt*Math.PI/180,scale=Math.min(w*.38,h*.47)*zoom/100;
+ function project(x:number,y:number,z:number){const xx=x*Math.cos(a)+z*Math.sin(a),zz=-x*Math.sin(a)+z*Math.cos(a);return {x:w/2+xx*scale,y:h*.43+(y*Math.cos(b)-zz*Math.sin(b))*scale,z:y*Math.sin(b)+zz*Math.cos(b)}}
+ const valid=points&&points.length>=33&&points.every(p=>[p.world_x,p.world_y,p.world_z].every(Number.isFinite));
+ const floor=valid?Math.max(points![27].world_y!,points![28].world_y!):.85;
+ ctx.strokeStyle='#e0e6e9';ctx.lineWidth=1;
+ for(let i=-4;i<=4;i++){for(const line of [[i*.2,floor,-.8,i*.2,floor,.8],[-.8,floor,i*.2,.8,floor,i*.2]]){const p=project(line[0],line[1],line[2]),q=project(line[3],line[4],line[5]);ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}
+ if(valid){const mapped=points!.map(p=>project(p.world_x!,p.world_y!,p.world_z!));const sorted=bones.map(([i,j])=>({i,j,z:(mapped[i].z+mapped[j].z)/2})).sort((p,q)=>q.z-p.z);ctx.lineCap='round';for(const {i,j}of sorted){if(points![i].visibility<.3||points![j].visibility<.3)continue;ctx.strokeStyle=(i%2===0&&j%2===0)?'#9caeb7':'#3e555f';ctx.lineWidth=5;ctx.beginPath();ctx.moveTo(mapped[i].x,mapped[i].y);ctx.lineTo(mapped[j].x,mapped[j].y);ctx.stroke()}
+ if(points![0].visibility>=.3&&points![11].visibility>=.3&&points![12].visibility>=.3){ctx.strokeStyle='#607782';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(mapped[0].x,mapped[0].y);ctx.lineTo((mapped[11].x+mapped[12].x)/2,(mapped[11].y+mapped[12].y)/2);ctx.stroke()}
+ for(const i of [0,11,12,13,14,15,16,23,24,25,26,27,28,29,30,31,32]){if(points![i].visibility<.3)continue;ctx.beginPath();ctx.arc(mapped[i].x,mapped[i].y,i===0?10:4,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill();ctx.lineWidth=2;ctx.strokeStyle='#607782';ctx.stroke()}
+ }else{ctx.fillStyle='#7b8b95';ctx.font='12px Segoe UI, sans-serif';ctx.textAlign='center';ctx.fillText(hasWorld?'Pose unavailable at this moment':'This older session has no 3D pose data',w/2,h*.42);ctx.font='11px Segoe UI, sans-serif';ctx.fillText(hasWorld?'Seek to a frame with valid tracking':'Upload the recording again to capture it',w/2,h*.42+23)}
+ ctx.font='10px Segoe UI, sans-serif';ctx.fillStyle='#81909a';ctx.textAlign='left';ctx.fillText('ESTIMATED POSE · HIP-CENTERED',16,h-17);frame=requestAnimationFrame(draw)}draw();return()=>cancelAnimationFrame(frame)},[yaw,tilt,zoom,hasWorld]);
+ return <section className="pose3d-panel" aria-label="Interactive estimated 3D pose"><div className="section-heading"><div><span className="eyebrow">ANOTHER PERSPECTIVE</span><h2>Explore your pose in 3D.</h2></div><div className="pose-presets"><button onClick={()=>{setYaw(0);setTilt(0)}}>Camera view</button><button onClick={()=>{setYaw(90);setTilt(0)}}>Rotate 90°</button><button onClick={()=>{setYaw(-30);setTilt(12);setZoom(100)}}>Reset</button></div></div>
+ <canvas ref={canvas} className="pose3d-canvas" aria-label="Estimated three-dimensional skeleton synchronized to video" onPointerDown={e=>{drag.current={x:e.clientX,y:e.clientY,yaw,tilt};e.currentTarget.setPointerCapture(e.pointerId)}} onPointerMove={e=>{if(drag.current){setYaw(Math.max(-180,Math.min(180,drag.current.yaw+(e.clientX-drag.current.x)*.6)));setTilt(Math.max(-45,Math.min(45,drag.current.tilt+(e.clientY-drag.current.y)*.3)))}}} onPointerUp={()=>drag.current=null} onPointerCancel={()=>drag.current=null}/>
+ <div className="pose-playback"><button disabled={!hasWorld} onClick={onTogglePlayback}>{playing?'Pause 3D playback':'Play 3D playback'}</button><span>Uses the recording’s playback position</span></div>
+ <div className="pose-sliders"><label>Rotate<input aria-label="Rotate 3D pose" type="range" min="-180" max="180" value={yaw} onChange={e=>setYaw(+e.target.value)}/></label><label>Tilt<input aria-label="Tilt 3D pose" type="range" min="-45" max="45" value={tilt} onChange={e=>setTilt(+e.target.value)}/></label><label>Zoom<input aria-label="Zoom 3D pose" type="range" min="60" max="150" value={zoom} onChange={e=>setZoom(+e.target.value)}/></label></div>
+ <p className="chart-help">Drag to rotate, or use the sliders. MediaPipe estimates this pose from one camera; hidden joints and depth can be uncertain. Squat verdicts still use the original 2D rules.</p></section>
+}

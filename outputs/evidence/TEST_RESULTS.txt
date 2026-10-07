@@ -1,0 +1,25 @@
+2026-10-04 — Windows
+
+Working directory: outputs/squat-coach
+.venv\Scripts\python.exe -m pytest -q tests
+14 passed, 1 warning in 2.19s
+Warning: third-party Starlette/AnyIO deprecated BlockingPortal alias.
+
+Working directory: outputs/squat-coach/frontend
+pnpm run build
+TypeScript passed.
+Vite: 782 modules transformed; build passed in 4.44s.
+CSS 18.45 kB, gzip 5.20 kB.
+JavaScript 709.91 kB, gzip 207.43 kB.
+Nonfatal warning: JavaScript chunk exceeds 500 kB.
+
+Backend launch:
+start.ps1 -> Uvicorn backend.api:app on 127.0.0.1:8790.
+Current process at verification: 34244.
+Saved sessions survived a fresh process launch.
+
+Parity on shared real pose cache:
+541 frames, Beginner and Pro: zero count/feedback/state mismatches.
+Each profile: 1 correct, 0 improper.
+
+See VERIFICATION.md for browser, export, timing and evidence limits.

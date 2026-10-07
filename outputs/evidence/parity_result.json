@@ -1,0 +1,80 @@
+{
+  "beginner": {
+    "upstream_counts": [
+      1,
+      0
+    ],
+    "new_counts": [
+      1,
+      0
+    ],
+    "upstream_state_seq": [],
+    "new_state_seq": [],
+    "mismatch_frames": 0,
+    "first_mismatches": [],
+    "feedback_mismatch_frames": 0,
+    "first_feedback_mismatches": [],
+    "state_mismatch_frames": 0,
+    "first_state_mismatches": [],
+    "new_reps": [
+      {
+        "index": 1,
+        "start_s": 7.5517,
+        "bottom_s": 11.8966,
+        "end_s": 14.7586,
+        "duration_s": 7.207,
+        "descent_s": 4.345,
+        "ascent_s": 2.862,
+        "min_thigh_angle": 30,
+        "max_thigh_angle": 89,
+        "verdict": "correct",
+        "fault_codes": []
+      }
+    ],
+    "baseline_errors": [],
+    "invalid_counts": {}
+  },
+  "pro": {
+    "upstream_counts": [
+      1,
+      0
+    ],
+    "new_counts": [
+      1,
+      0
+    ],
+    "upstream_state_seq": [],
+    "new_state_seq": [],
+    "mismatch_frames": 0,
+    "first_mismatches": [],
+    "feedback_mismatch_frames": 0,
+    "first_feedback_mismatches": [],
+    "state_mismatch_frames": 0,
+    "first_state_mismatches": [],
+    "new_reps": [
+      {
+        "index": 1,
+        "start_s": 7.5517,
+        "bottom_s": 11.8966,
+        "end_s": 14.7586,
+        "duration_s": 7.207,
+        "descent_s": 4.345,
+        "ascent_s": 2.862,
+        "min_thigh_angle": 30,
+        "max_thigh_angle": 89,
+        "verdict": "correct",
+        "fault_codes": []
+      }
+    ],
+    "baseline_errors": [],
+    "invalid_counts": {}
+  },
+  "source": {
+    "path": "C:\\Users\\vishnu\\Documents\\Codex\\2026-10-04\\can-u-continue-with-where-the\\outputs\\squat-coach\\vendor\\upstream-repo\\AI-Fitness-Trainer-Using-MediaPipe-Analyzing-Squats\\output_sample.mp4",
+    "frames": 541,
+    "fps": 29.0,
+    "duration_s": 18.655172413793103,
+    "elapsed_s": 15.31,
+    "input_note": "Upstream output_sample.mp4 is already annotated; local reproduction evidence only."
+  }
+}
