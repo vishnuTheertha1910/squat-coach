@@ -13,6 +13,7 @@ The standalone public repository packages the existing application; it does not 
 - Packaged app started independently at temporary port 8791. All eight restored sessions served through the API; CSV/PDF endpoints, HTTP range video playback, and bundled frontend HTML passed checks.
 - Tracked package is approximately 95.6 MB across 102 files before this note; largest file approximately 30.2 MB. No file requires Git LFS or exceeds GitHub's 100 MiB regular-file limit.
 - Common GitHub/OpenAI token and private-key patterns scanned in packaged text; no matches found. Local environments, caches, runtime databases and nested Git metadata are excluded.
+- Public repository successfully pushed to `https://github.com/vishnuTheertha1910/squat-coach`. A fresh shallow clone from GitHub restored all eight sessions, passed a repeat restoration without duplicate rows, matched all 12 upstream file hashes, and served frontend HTML/assets, session endpoints, CSV/PDF and HTTP range video playback through the API test client. The first clone attempt encountered a network reset; the retry completed successfully.
 
 ## Limits
 
